@@ -19,9 +19,10 @@ modules:
 
   - type: dnf
     install:
-      - neovim
-      - starship
-      - tmux
+      packages:
+        - neovim
+        - starship
+        - tmux
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
