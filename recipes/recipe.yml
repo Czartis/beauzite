@@ -1,5 +1,5 @@
 ---
-yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: beauzite
 # description will be included in the image's metadata
@@ -18,11 +18,10 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
-    repos:
-      packages:
-        - neovim
-        - starship
-        - tmux
+    install:
+      - neovim
+      - starship
+      - tmux
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
