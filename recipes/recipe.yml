@@ -3,10 +3,10 @@
 # image will be published to ghcr.io/<user>/<name>
 name: beauzite
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: base ublue to create a hyprland dms immutable distro.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/base-main
 image-version: latest # You can pin to a specific version of Fedora as well
 
 # module configuration, executed in order
@@ -20,11 +20,12 @@ modules:
   - type: dnf
     repos:
       copr:
-        - atim/starship
+        -luke
     install:
       packages:
-        - micro
+        - neovim
         - starship
+        - tmux
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
