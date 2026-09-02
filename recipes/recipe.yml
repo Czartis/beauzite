@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: beauzite
 # description will be included in the image's metadata
@@ -19,8 +19,6 @@ modules:
 
   - type: dnf
     repos:
-      copr:
-    install:
       packages:
         - neovim
         - starship
